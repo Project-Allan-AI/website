@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {Widget} from 'react-chat-widget';
+import ChatWidget from './components/ChatWidget'
 import logo from './logo.svg';
 import './App.css';
 import 'react-chat-widget/lib/styles.css';
@@ -14,7 +14,7 @@ class App extends Component {
           </h1>
         </header>
         <div>
-          <Widget />
+          <ChatWidget />
         </div>
       </div>
     );
