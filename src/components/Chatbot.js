@@ -1,8 +1,10 @@
 import React from 'react';
 import uuidv4 from 'uuid/v4';
 import ChatWidget from './ChatWidget.js';
+const env = require('../env.js');
+const backendURL = env.backendURL;
 
-class Conversation extends React.Component {
+class Chatbot extends React.Component {
 
   constructor (props) {
     super(props);
@@ -31,7 +33,7 @@ class Conversation extends React.Component {
   }
 
   async serverLivecheck () {
-    const response = await fetch('/livecheck');
+    const response = await fetch(backendURL+'/livecheck');
     const body = await response.json();
     if (response.status !== 200) throw Error(body.message);
     return body;
@@ -40,7 +42,7 @@ class Conversation extends React.Component {
   handleSubmit (event) {
     console.log('in Chatbot handlesubmit');
     event.preventDefault();
-    fetch('/chatbot/api/test', {
+    fetch(backendURL+'/chatbot/api/test', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -62,7 +64,7 @@ class Conversation extends React.Component {
     return new Promise(async (resolve,reject) =>{
       console.log('in Chatbot handleUserUtterance');
       await this.setState({userUtterance:message})
-      fetch('/chatbot/api', {
+      fetch(backendURL+'/chatbot/api/test', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
@@ -128,4 +130,4 @@ class Conversation extends React.Component {
     );
   }
 }
-export default Conversation;
+export default Chatbot;

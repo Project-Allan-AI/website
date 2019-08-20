@@ -20,7 +20,7 @@ class ChatWidget extends React.Component {
     console.log(`New message incoming! ${newMessage}`);
     await this.props.handleUserUtterance(newMessage);
     await this.setState({responseMessage:this.props.responseMessage})
-    this.state.chatPopup.addResponseMessage(this.state.responseMessage)
+    addResponseMessage(this.state.responseMessage)
   }
 
   render(){
