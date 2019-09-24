@@ -3,10 +3,13 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@nivo/bar": "^0.59.2",
     "react": "^16.9.0",
     "react-chat-widget": "^2.1.4-1",
     "react-dom": "^16.9.0",
-    "react-scripts": "^3.1.1"
+    "react-scripts": "^3.1.1",
+    "react-vis": "^1.11.7",
+    "save": "^2.4.0"
   },
   "scripts": {
     "start": "react-scripts start",
