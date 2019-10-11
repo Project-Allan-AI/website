@@ -81,3 +81,5 @@ class BarChartLocationTime extends React.Component{
     )
   }
 }
+
+export.def
