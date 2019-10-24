@@ -82,4 +82,4 @@ class BarChartLocationTime extends React.Component{
   }
 }
 
-export.def
+export default BarChartLocationTime
