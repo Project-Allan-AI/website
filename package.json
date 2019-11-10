@@ -4,13 +4,15 @@
   "private": true,
   "dependencies": {
     "@nivo/bar": "^0.59.2",
+    "bootstrap": "^4.3.1",
     "d3": "^5.12.0",
+    "jquery": "^3.4.1",
+    "popper.js": "^1.16.0",
     "react": "^16.9.0",
     "react-chat-widget": "^2.1.4-1",
     "react-dom": "^16.9.0",
     "react-scripts": "^3.1.1",
-    "react-vis": "^1.11.7",
-    "save": "^2.4.0"
+    "react-vis": "^1.11.7"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -26,5 +28,8 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "devDependencies": {
+    "eslint": "^6.6.0"
+  }
 }
